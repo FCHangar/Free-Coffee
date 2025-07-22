@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Coffee Hangar - Free Coffee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #fce780;
+            color: #000;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.2em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 1em;
+        }
+        .code {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>FLIGHT COFFEE HANGAR</h1>
+    <h2>FREE COFFEE TODAY ONLY!</h2>
+    <p>Show this code at the till:</p>
+    <div class="code" id="promo-code">COZY000</div>
+    <div class="footer">119 Dixon St. Te Aro, Wellington</div>
+
+    <script>
+        function generateCode() {
+            const prefix = "COZY";
+            const number = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+            return prefix + number;
+        }
+        document.getElementById("promo-code").innerText = generateCode();
+    </script>
+</body>
+</html>
